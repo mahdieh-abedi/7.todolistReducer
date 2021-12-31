@@ -8,6 +8,7 @@ import ToggleMode from "./ToggleMode/ToggleMode";
 import MenuTabs from "./MenuTabs/MenuTabs";
 import AddNewItem from "./AddNewItem/AddNewItem";
 import ToDoItems from "./ToDoItems/ToDoItems";
+import Reducer,{Types} from "./Reducer"
 
 export {
   Data,
@@ -20,4 +21,6 @@ export {
   MenuTabs,
   AddNewItem,
   ToDoItems,
+  Types,
+  Reducer,
 };

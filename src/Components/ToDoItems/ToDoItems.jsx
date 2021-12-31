@@ -1,33 +1,31 @@
 import "./ToDoItems.css";
 
-import { AddNewItem } from "..";
-import { FormGroup, Checkbox, Grid } from "@mui/material";
+import { Checkbox } from "@mui/material";
+
+import {Types} from "..";
 
 import RadioButtonCheckedRoundedIcon from "@mui/icons-material/RadioButtonCheckedRounded";
 import RadioButtonUncheckedRoundedIcon from "@mui/icons-material/RadioButtonUncheckedRounded";
 import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 
-const ToDoItems = ({ list, toDoList, setToDoList }) => {
-  const handleDeleteItem = (listId, ItemId) => {
-    setToDoList(
-      toDoList.map((list) =>
-        list.listID === listId
-          ? {
-              ...list,
-              listItem: list.listItem.filter((item) => item.itemID !== ItemId),
-            }
-          : list
-      )
-    );
+const ToDoItems = ({ list, dispatch}) => {
+  const handleDeleteItem = (listId,ItemId) => {
+    dispatch({type:Types.DeleteItem ,payload:{listId,ItemId}})
   };
-
+  const handleUpdateItemStatus = (listId, ItemId, e) => {
+    dispatch({type:Types.UpdateItemStatus ,payload:{listId,ItemId,checked:e.target.checked}})
+  };
   return (
     <>
       {list.listItem.map((item) => (
         <div className="listItems">
-          <div key={list.listID * 100 + item.itemID}>
+          <div key={`${list.listID}-${item.id}`}>
             <Checkbox
               icon={<RadioButtonUncheckedRoundedIcon fontSize="large" />}
+              checked={item.status}
+              onChange={(e) =>
+                handleUpdateItemStatus(list.listID, item.itemID, e)
+              }
               checkedIcon={
                 <RadioButtonCheckedRoundedIcon
                   color="success"
@@ -48,7 +46,6 @@ const ToDoItems = ({ list, toDoList, setToDoList }) => {
           </span>
         </div>
       ))}
-      <AddNewItem list={list} toDoList={toDoList} setToDoList={toDoList} />
     </>
   );
 };

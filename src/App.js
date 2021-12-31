@@ -1,16 +1,16 @@
 import "./App.css";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Data, Menu, ToDoListPage, AboutUsPage, HomePage } from "./Components";
+import { Data, Menu, ToDoListPage, HomePage,Reducer } from "./Components";
 
 const App = () => {
-  const [toDoList, setToDoList] = useState(Data, [], () => {
-    const LocalData = localStorage.getItem("Data");
-    return LocalData ? JSON.parse(LocalData) : Data;
-  });
+  const [toDoList, dispatch] = useReducer(
+    Reducer,
+    JSON.parse(localStorage.getItem("Data")) || Data
+  );
 
   const [newCategory, setNewCategory] = useState({
     listID: "",
@@ -33,7 +33,7 @@ const App = () => {
             element={
               <ToDoListPage
                 toDoList={toDoList}
-                setToDoList={setToDoList}
+                dispatch={dispatch}
                 newCategory={newCategory}
                 setNewCategory={setNewCategory}
               />

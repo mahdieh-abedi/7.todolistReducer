@@ -1,9 +1,9 @@
 import { styled } from "@mui/material/styles";
 
-import {  Switch,FormControlLabel } from "@mui/material";
+import { Switch, FormControlLabel } from "@mui/material";
+
 
 const ToggleMode = () => {
-
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -54,7 +54,7 @@ const ToggleMode = () => {
 
   return (
     <FormControlLabel
-      control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+      control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked/>}
       label="Mode"
     />
   );

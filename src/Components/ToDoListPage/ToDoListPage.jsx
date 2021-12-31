@@ -2,26 +2,30 @@ import "./ToDoListPage.css";
 
 import { ToDoList, AddCategory } from "..";
 
+import { useState } from "react";
+
 const ToDoListPage = ({
   toDoList,
-  setToDoList,
-  setNewCategory,
-  newCategory,
+  dispatch
 }) => {
+
+  const [newCategory, setNewCategory] = useState({
+    listID: "",
+    listName: "",
+    listItem: [],
+  });
+  
   return (
     <div className="page">
       <div className="pageContainer">
         <AddCategory
-          toDoList={toDoList}
-          setToDoList={setToDoList}
+          dispatch={dispatch}
           newCategory={newCategory}
           setNewCategory={setNewCategory}
         />
         <ToDoList
           toDoList={toDoList}
-          setToDoList={setToDoList}
-          newCategory={newCategory}
-          setNewCategory={setNewCategory}
+          dispatch={dispatch}
         />
       </div>
     </div>
