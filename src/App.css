@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRipPz02wjV67hiiTTbQZHX8KBVGPfJajdDw&usqp=CAU");
+}
+
+.pageContainer{
+  width:85%;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}

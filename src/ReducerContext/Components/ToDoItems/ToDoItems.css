@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(134, 192, 149);
+    padding: 5px;
+    border-radius: auto;
+  }
+  
+  .headerTitle {
+    width: 90%;
+    display: inline-block;
+  }
+  .ItemContainer{
+    height:250px;
+    background-color: rgb(241, 213, 227);
+  }
+  .listItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    padding: 0 10px;
+  }
+  

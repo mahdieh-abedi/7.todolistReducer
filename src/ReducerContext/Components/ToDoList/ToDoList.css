@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.listCard {
+  border: 3px solid grey;
+  border-radius: 10px;
+}

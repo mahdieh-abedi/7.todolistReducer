@@ -1,0 +1,17 @@
+.homePage {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRipPz02wjV67hiiTTbQZHX8KBVGPfJajdDw&usqp=CAU");
+  padding: 250px;
+  opacity: 0.85;
+}
+.homeTitleBox{
+    background-color: rgb(69, 114, 81);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    opacity: 1;
+}
+.homeTitle {
+  color: rgb(240, 227, 233);
+  display: inline-block;
+  opacity: 1;
+}

@@ -1,0 +1,19 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  }
+  
+  .pageContainer{
+    width:85%;
+  }
+  
+  .css-1ld3b9g-MuiGrid-root{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }

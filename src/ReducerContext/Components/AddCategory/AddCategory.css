@@ -1,0 +1,21 @@
+.addCategoryBtn {
+    width: 300px;
+    background-color: rgb(134, 192, 149);
+    padding: 5px;
+    margin: 0 20px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .addFormBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    
+  }
+  .addFormItems {
+    margin: 10px;
+    background-color: rgb(236, 191, 213);
+  }

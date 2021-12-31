@@ -1,0 +1,8 @@
+.AddToDoItem{
+    padding:5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(241, 213, 227);
+  }
