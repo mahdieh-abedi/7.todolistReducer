@@ -8,7 +8,7 @@ import {Types} from "..";
 
 import { TextField } from "@mui/material";
 
-const AddNewItem = ({list, dispatch }) => {
+const AddNewItem = ({ list, dispatch }) => {
   const [newItem, setNewItem] = useState({
     status: false,
     itemTitle: "",
