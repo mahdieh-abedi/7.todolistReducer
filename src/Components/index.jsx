@@ -8,6 +8,9 @@ import ToggleMode from "./ToggleMode/ToggleMode";
 import MenuTabs from "./MenuTabs/MenuTabs";
 import AddNewItem from "./AddNewItem/AddNewItem";
 import ToDoItems from "./ToDoItems/ToDoItems";
+import ToDoListContextProvider,{ToDoListContext} from "./Context/ToDoListContext";
+import CategoryContextProvider,{CategoryContext} from "./Context/CategoryContext";
+import ToDoContextProvider,{ToDoContext} from "./Context/ToDoContext";
 import Reducer,{Types} from "./Reducer"
 
 export {
@@ -21,6 +24,12 @@ export {
   MenuTabs,
   AddNewItem,
   ToDoItems,
-  Types,
+  ToDoListContext,
+  ToDoListContextProvider,
+  CategoryContext,
+  CategoryContextProvider,
+  ToDoContext,
+  ToDoContextProvider,
   Reducer,
+  Types
 };

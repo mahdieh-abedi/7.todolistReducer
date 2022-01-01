@@ -1,18 +1,17 @@
 import "./AddNewItem.css";
 
-import { useState } from "react";
+import {useContext } from "react";
+
+import { ToDoContext,ToDoListContext,Types } from "..";
 
 import { Form } from "react-bootstrap";
 
-import {Types} from "..";
-
 import { TextField } from "@mui/material";
 
-const AddNewItem = ({ list, dispatch }) => {
-  const [newItem, setNewItem] = useState({
-    status: false,
-    itemTitle: "",
-  });
+const AddNewItem = ({ list}) => {
+  const { dispatch} = useContext(ToDoListContext);
+  const { newItem, setNewItem } = useContext(ToDoContext);
+  
   const handleAddItem = (e) => {
     e.preventDefault();
     const itemTitle=newItem.itemTitle

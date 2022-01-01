@@ -2,17 +2,17 @@ import "./AddCategory.css";
 
 import { Form } from "react-bootstrap";
 
-import { useState } from "react";
+import { useState,useContext } from "react";
 
-import {Types} from ".."
+import {ToDoListContext,CategoryContext, Types } from "..";
 
 import { ClickAwayListener, TextField } from "@mui/material";
 
-const AddCategory = ({
-  dispatch,
-  newCategory,
-  setNewCategory,
-}) => {
+const AddCategory = () => {
+
+  const {dispatch } = useContext(ToDoListContext);
+  const{newCategory,setNewCategory}=useContext(CategoryContext)
+  
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -25,8 +25,8 @@ const AddCategory = ({
 
   const handleAddCategory = (e) => {
     e.preventDefault();
-    const listName=newCategory.listName
-    dispatch({type:Types.AddCategory,payload:{listName}})
+    const listName = newCategory.listName;
+    dispatch({ type: Types.AddCategory, payload: { listName } });
     setNewCategory({
       listName: "",
       listItem: [],

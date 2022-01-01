@@ -1,5 +1,9 @@
 import "./ToDoItems.css";
 
+import React, { useContext } from "react";
+
+import {ToDoListContext} from "..";
+
 import { Checkbox } from "@mui/material";
 
 import {Types} from "..";
@@ -8,7 +12,10 @@ import RadioButtonCheckedRoundedIcon from "@mui/icons-material/RadioButtonChecke
 import RadioButtonUncheckedRoundedIcon from "@mui/icons-material/RadioButtonUncheckedRounded";
 import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 
-const ToDoItems = ({ list, dispatch}) => {
+const ToDoItems = ({ list}) => {
+
+  const{dispatch}=useContext(ToDoListContext)
+
   const handleDeleteItem = (listId,ItemId) => {
     dispatch({type:Types.DeleteItem ,payload:{listId,ItemId}})
   };

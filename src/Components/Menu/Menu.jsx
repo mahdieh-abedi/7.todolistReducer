@@ -9,7 +9,6 @@ const Menu = () => {
     <>
       <div className="menu">
         <MenuTabs />
-        <ToggleMode />
       </div>
       <Outlet />
     </>
