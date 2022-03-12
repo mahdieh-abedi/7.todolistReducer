@@ -9,7 +9,7 @@ const ToDoListContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("Data")) || Data
   );
   useEffect(() => {
-    document.title = "Weekly Planner";
+    document.title = "Weekly Planner by reducer";
     localStorage.setItem("Data", JSON.stringify(toDoList));
   }, [toDoList]);
 
