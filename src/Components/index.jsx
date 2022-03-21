@@ -1,4 +1,4 @@
-import Data from "./Data";
+import Data from "./Data/data";
 import ToDoList from "./ToDoList/ToDoList";
 import AddCategory from "./AddCategory/AddCategory";
 import Menu from "./Menu/Menu";
@@ -11,7 +11,7 @@ import ToDoItems from "./ToDoItems/ToDoItems";
 import ToDoListContextProvider,{ToDoListContext} from "./Context/ToDoListContext";
 import CategoryContextProvider,{CategoryContext} from "./Context/CategoryContext";
 import ToDoContextProvider,{ToDoContext} from "./Context/ToDoContext";
-import Reducer,{Types} from "./Reducer"
+import Reducer,{Types} from "./Reducer/Reducer"
 
 export {
   Data,
